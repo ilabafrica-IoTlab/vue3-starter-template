@@ -1,8 +1,5 @@
 <template>
-  <div id="nav bg-blue-300">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <div class="mt-40"></div>
   <router-view />
 </template>
 

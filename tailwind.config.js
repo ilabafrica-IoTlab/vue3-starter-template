@@ -1,7 +1,8 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: [],
+  mode: 'jit',
+  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -847,11 +848,11 @@ module.exports = {
     backdropBlur: ['responsive'],
     backdropBrightness: ['responsive'],
     backdropContrast: ['responsive'],
-    backdropDropShadow: ['responsive'],
     backdropFilter: ['responsive'],
     backdropGrayscale: ['responsive'],
     backdropHueRotate: ['responsive'],
     backdropInvert: ['responsive'],
+    backdropOpacity: ['responsive'],
     backdropSaturate: ['responsive'],
     backdropSepia: ['responsive'],
     backgroundAttachment: ['responsive'],
@@ -1030,10 +1031,5 @@ module.exports = {
     wordBreak: ['responsive'],
     zIndex: ['responsive', 'focus-within', 'focus'],
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/aspect-ratio'),
-    require('@tailwindcss/typography'),
-    require('tailwindcss-children'),
-  ],
+  plugins: [],
 }
