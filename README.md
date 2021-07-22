@@ -2,10 +2,12 @@
 
 ## Project setup
 
+## Prerequisite
+
 Install possCSS cli
 
 ```javascript
-npm install p
+
 ```
 
 ```
