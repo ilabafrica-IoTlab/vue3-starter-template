@@ -18,6 +18,10 @@ npm run serve
 
 ```
 npm run build
+
+//Preview after build
+npm run preview
+
 ```
 
 ### Run your unit tests
@@ -34,4 +38,4 @@ npm run lint
 
 ### Customize configuration
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
+See [Configuration Reference](https://vitejs.dev/config/).

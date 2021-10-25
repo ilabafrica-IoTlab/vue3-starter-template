@@ -1,13 +1,15 @@
 {
   "name": "vue3-starter-template",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint",
-    "format": "prettier -w ."
+    "serve": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:unit": "jest",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "format": "pretty-quick"
   },
   "dependencies": {
     "@tailwindcss/postcss7-compat": "^2.0.2",
@@ -16,32 +18,41 @@
     "postcss": "^7",
     "register-service-worker": "^1.7.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
-    "vue": "^3.0.0",
+    "vue": "^3.1.0",
     "vue-router": "^4.0.0-0",
+    "@vue/compat": "^3.1.0",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/typography": "^0.4.1",
+    "@vitejs/plugin-vue": "^1.9.3",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "^3.1.1",
     "@vue/cli-plugin-pwa": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-plugin-unit-jest": "^4.5.13",
     "@vue/cli-plugin-vuex": "~4.5.0",
-    "@vue/cli-service": "^4.5.13",
-    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/compiler-sfc": "^3.1.0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/test-utils": "^2.0.0-0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.0.0",
+    "husky": "^7.0.4",
     "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.1",
     "tailwindcss-children": "^2.1.0",
     "typescript": "~3.9.3",
+    "vite": "^2.6.10",
     "vue-cli-plugin-tailwind": "~2.0.6",
     "vue-jest": "^5.0.0-0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
